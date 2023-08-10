@@ -1,0 +1,116 @@
+.mobile__nav{
+    padding: 2.8rem 0 3.2rem 2.3rem;
+    background: $background2;
+    border-bottom: 1px solid black;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    @include tablet{
+        display: flex;
+    }
+}
+.dropdown__mobile{
+    max-height: 0;
+    transition: max-height .5s linear, opacity .33s linear, visibility .5s linear;
+}
+.dropdown__mobile.hidden{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.dropdown__mobile.active{
+    padding-top: 2.3rem;
+    padding-bottom: 2.3rem;
+    max-height: 100vh;
+}
+.h1__mobile{
+    display: none;
+    padding-top: 16rem;
+    @include large-phone{
+        display: block;
+    }
+}
+.mobile__img{
+    display: none;
+    @include tablet{
+        display: block;
+    }
+}
+.nav__btn{
+    display: none;
+    @include large-phone{
+        display: block;
+    }
+}
+.h1__mobile{
+    padding: 20rem 0 5rem 0;
+}
+.mobile__nav__btn{
+    position: absolute;
+    right: 4.6rem;
+    cursor: pointer;
+}
+.mobile__nav__expanded{
+    background-color: $background2;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 9.6rem;
+    left: 0;
+    transition: opacity .5s linear, max-height .75s linear, visibility .75s linear;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.mobile__nav__expanded ul{
+    list-style-type: none;
+}
+.mobile__nav__expanded li{
+    border-bottom: 1px solid black;
+    padding: 2.1rem 2.8rem 2.1rem 3.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.mobile__product, .mobile__resources{
+    padding: 2.3rem 9rem 2.3rem 3.2rem;
+}
+.mobile__product li{
+    padding: 0 0 3.2rem 0;
+}
+.mobile__company, .mobile__product, .mobile__resources{
+    background: #FFFFFF;
+}
+.mobile__product li, .mobile__company li{
+    border: 0;
+}
+.main__text__btn{
+    height: auto;
+    margin: 6.5rem 0 6.5rem 0;
+    display: none;
+    padding: 1.6rem 3.4rem 1.2rem 3.8rem;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    @include tablet{
+        display: flex;
+    }
+}
+.main__text__btn__text{
+    width: 60%;
+}
+.mobile__product__btn{
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 3.4rem 1.2rem 3.8rem;
+    @include tablet{
+        display: flex;
+    }
+}
+.mobile__product__li{
+    position: absolute;
+    left: 7.2rem;
+}

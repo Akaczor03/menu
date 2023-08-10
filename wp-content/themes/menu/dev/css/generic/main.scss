@@ -1,0 +1,143 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    @include large-laptop {
+        font-size: 9px;
+      }
+    @include laptop {
+        font-size: 8px;
+      }
+    @include large-phone {
+        font-size: 9px;
+      }
+    @include phone {
+        font-size: 8px;
+      }
+}
+ul{
+    padding: 0;
+}
+li, button{
+    cursor: pointer;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: $background2;
+}
+.btn{
+    display: inline-block;
+}
+#container{
+    padding: 0 8.8rem 0 8.8rem;
+    overflow: hidden;
+    @include large-phone{
+        display: none;
+    }
+}
+img{
+    max-width: 100%;
+}
+.main{
+    padding: 0 8.8rem 0 8.8rem;
+    overflow: hidden;
+    background: $background2;
+}
+.main h1{
+    width: 90%;
+    padding-top: 13.6rem;
+}
+.main__container{
+    display: flex;
+    padding-top: 9.5rem;
+}
+.main__text__container{
+    display: flex;
+    flex-direction: column;
+    width: 61.6rem;
+    padding: 5.7rem 0 6.4rem 5.7rem;
+    @include tablet{
+        width: 100%;
+        padding: 0;
+    }
+}
+.main__text__link{
+    margin-top: 6.4rem;
+    width:max-content;
+    cursor: pointer;
+}
+.main__text__link__text{
+    position: relative;
+    bottom: 33%;
+    left: 1.9rem;
+}
+.cookies{
+    background: $secondary;
+    width: 41.4rem;
+    height: 22.8rem;
+    padding: 4rem;
+    color: #FFF;
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    right: 8.8rem;
+    display: block;
+    @include large-phone{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.cookies__container{
+    display: flex;
+    margin-top: 5.5rem;
+    height: 4.4rem;
+    text-align: center;
+}
+.cookies__btn{
+    background: $primary;
+    width: 18.4rem;
+    height: 100%;
+    border: none;
+}
+.cookies__decline{
+    position: relative;
+    top: 25%;
+    left: 10%
+}
+.arrow{
+    position: relative;
+    top: 3.4rem;
+    right: 3.4rem;
+}
+.arrow--right{
+    transition: all 1s;
+}
+.arrow--right--clicked{
+    transform: translateX(-2rem);
+}
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+}
+.active{
+    opacity: 1;
+    visibility: visible;
+    max-height: 100vh;
+}
+.main__img{
+    @include tablet{
+        display: none;
+    }
+}
+.main__text__link{
+    @include tablet{
+        display: none;
+    }
+}
+
+  

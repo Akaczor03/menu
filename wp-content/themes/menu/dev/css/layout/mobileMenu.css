@@ -1,0 +1,27 @@
+.dropdown__mobile {
+  max-height: 0;
+  transition: max-height 0.5s linear, opacity 0.33s linear, visibility 0.5s linear;
+}
+
+.dropdown__mobile.hidden {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.dropdown__mobile.active {
+  padding-top: 2.3rem;
+  padding-bottom: 2.3rem;
+}
+
+.h1__mobile {
+  display: none;
+  padding-top: 16rem;
+}
+
+.mobile__img {
+  display: none;
+}
+
+.nav__btn {
+  display: none;
+}/*# sourceMappingURL=mobileMenu.css.map */
