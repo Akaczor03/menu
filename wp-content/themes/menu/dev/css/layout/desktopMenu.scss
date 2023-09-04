@@ -65,7 +65,7 @@
     transform: rotateX(180deg);
 }
 .nav__svg {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-out;
 }
 .company, .product{
     z-index: 100;
@@ -109,9 +109,27 @@
     margin: 0;
     border-bottom: 1px solid black;
 }
-.dropdown:hover{
+.dropdown {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -3px;
+}
+.dropdown::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
     border-bottom: 3px solid $primary;
-    z-index: 1000;
+    transition: width 0.3s ease-out, left 0.3s ease-out; 
+}
+.dropdown:hover::before {
+    width: 100%;
+    left: 0;
+}
+.dropdown:not(:hover)::before {
+    width: 0; 
+    left: 0;
 }
 .dropdown__company:hover + .company{
     visibility: visible;

@@ -12,10 +12,9 @@
         </style>
 </head>
 <body>
-    
     <?php
         include 'layout/header.php';
-    ?>tn
+    ?>
 <main>
     <div class="main">
         <h1 class="h1__desktop">Finally, a spend control and expense management solution for small business</h1>
