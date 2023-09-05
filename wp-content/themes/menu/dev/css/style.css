@@ -429,15 +429,7 @@ img {
   border-radius: 4px;
 }
 
-.dropdown__product:hover .nav__svg {
-  transform: rotateX(180deg);
-}
-
-.dropdown__company:hover .nav__svg {
-  transform: rotateX(180deg);
-}
-
-.dropdown__resources:hover .nav__svg {
+.dropdown .nav__svg {
   transform: rotateX(180deg);
 }
 

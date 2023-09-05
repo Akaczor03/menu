@@ -18,6 +18,11 @@
 <main>
     <div class="main">
         <h1 class="h1__desktop">Finally, a spend control and expense management solution for small business</h1>
+        <div>
+        <?= __( 'Footer Menu', 'lang' ) ?>
+
+
+        </div>
         <span class="h1__mobile body--large">Finally, a spend control and expense management solution for small business</span>
             <div class="main__container">
             <div class="main__img">

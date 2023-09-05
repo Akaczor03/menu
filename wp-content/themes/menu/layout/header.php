@@ -1,3 +1,13 @@
+<?php 
+$menu = apply_filters('wpf_menu', [], 'primary_menu');
+$footer = apply_filters('wpf_menu', [], 'footer_menu');
+?>
+<!---<pre>
+<?php print_r($menu) ?>
+</pre>
+<pre>
+<?php print_r($footer) ?>
+</pre>-->
 <!--dekstop nav-->
 <div class="desktop__nav">
         <ul class="body--normal">
@@ -5,7 +15,12 @@
             <img src="<?php the_field('logo')?>" class="nav__logo" alt="logo">
         <?php endif; ?>
             <div class="nav__links">
-                <li class="dropdown__product dropdown"><a href="#">Product 
+                <?php foreach($menu as $item): ?>
+                    <?php if(isset($item)): ?>
+                        <li class="dropdown"></li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+                <li class="dropdown__product dropdown"><a href="#">
                     <svg class="nav__svg" width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L5.50004 6L10 1" stroke="black" stroke-linecap="round"/>
                     </svg>
@@ -203,5 +218,6 @@
                     </div>
                 <li>Partners</li>
             </ul>
+
         </div>
         
